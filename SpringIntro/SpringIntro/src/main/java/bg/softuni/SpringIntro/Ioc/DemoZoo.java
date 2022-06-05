@@ -1,0 +1,19 @@
+package bg.softuni.SpringIntro.Ioc;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DemoZoo implements CommandLineRunner {
+
+    private final ZooService zooService;
+
+    public DemoZoo(ZooService zooService) {
+        this.zooService = zooService;
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        zooService.doWork();
+    }
+}
